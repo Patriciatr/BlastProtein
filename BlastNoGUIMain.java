@@ -60,13 +60,11 @@ public class BlastNoGUIMain implements ActionListener {
 		}
 		if (!correct) {
 			BlastController bCnt = new BlastController();
-			if (button.getTypeP().isSelected()) {
-				try {
-					String result = bCnt.blastQuery(type, dataBaseFile, dataBaseIndexes, (float) porcentaje, secuencia);
-					button.printResult(result);
-				} catch (Exception exc) {
-					System.out.println("Error en la llamada: " + exc.toString());
-				}
+			try {
+				String result = bCnt.blastQuery(type, dataBaseFile, dataBaseIndexes, (float) porcentaje, secuencia);
+				button.printResult(result);
+			} catch (Exception exc) {
+				System.out.println("Error en la llamada: " + exc.toString());
 			}
 		}
 

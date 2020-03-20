@@ -15,7 +15,7 @@ public class BlastPrincipal {
 
 	public static void busqueda() {
 		BlastVista button = new BlastVista();
-		JFrame fr = new JFrame("Traducir");
+		JFrame fr = new JFrame("Búsqueda");
 		BlastNoGUIMain ctr = new BlastNoGUIMain(button);
 		fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		fr.setContentPane(button);
